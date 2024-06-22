@@ -1,0 +1,220 @@
+/* transition: transform .15s cubic-bezier(0, .10, .15, 6); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+*,
+html,
+body {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+}
+.top-bar {
+  text-align: center;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  /* border: 1px solid white; */
+  top: 10px;
+  margin-top: 10px;
+  display: flex;
+  position: sticky;
+  backdrop-filter: blur(10px);
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.top-bar-visible {
+  opacity: 1; /* Override any other styles to ensure visibility */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for the opacity change */
+  position: sticky;
+}
+
+/* Ensure there's a fallback background color for browsers that do not support backdrop-filter */
+
+.container {
+  margin: 15px;
+  margin-top: 9px;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.circle {
+  margin: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  filter: brightness(70%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.circle-text {
+  font-family: sans-serif;
+  color: white;
+  position: absolute;
+  text-overflow: ellipsis;
+  font-size: 23px;
+  top: -8%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.profile {
+  margin: 0;
+  background: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.profile:hover,
+.profile-priority:hover {
+  filter: brightness(70%);
+}
+
+.profile-priority {
+  margin: 0;
+  background: black;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+.img-profile {
+  margin: 20px;
+}
+
+.alternative-route {
+  display: flex; /* Ensures the container uses flexbox layout */
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Centers children vertically */
+}
+
+.text {
+  margin: 10px;
+}
+
+.user-priority {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.user-description {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.fit-cover {
+  object-fit: cover;
+  border-radius: 15px;
+  max-height: 400px;
+  max-width: 100%;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-description {
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  bottom: 30px;
+  left: 25px;
+  right: 0;
+}
+
+.container-awal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big {
+  max-width: 500px;
+  margin: 0 16px;
+}
+
+@media (max-width: 400px) {
+  .big {
+    max-width: 100%;
+  }
+}
+
+/* hover button */
+.block-hover {
+  transition: transform 0.15s cubic-bezier(0, 0.5, 0.1, 3);
+}
+
+.block-hover:hover {
+  transform: scale(1.02);
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  padding: 17px;
+  justify-content: space-between;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.where {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dot {
+  font-size: 25px;
+  color: grey;
+  cursor: pointer;
+}
+
+.dot:hover {
+  color: black;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+  margin: 15px 0;
+}
+
+body {
+  /* Set the background image to profile.jpg */
+  background-image: url("profile.jpg");
+  /* Ensure the background covers the entire body */
+  background-size: cover;
+  /* Do not repeat the background image */
+  background-repeat: no-repeat;
+  /* Position the background image */
+  background-position: center center;
+  /* Apply a blur effect to the background */
+  backdrop-filter: blur(8px) brightness(40%);
+  /* Use a fixed background to prevent scrolling effects */
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Add a layer to contain the content without the blur effect */
+.content {
+  position: relative; /* Position relative to its normal position */
+  /* Use a larger z-index to ensure content is above the background */
+  z-index: 2;
+  /* Prevent the blur effect from applying to the content */
+  background: transparent;
+}
