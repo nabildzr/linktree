@@ -9,6 +9,11 @@ body {
   padding: 0;
   box-sizing: none;
 }
+
+a{
+  text-decoration: none;
+}
+
 .top-bar {
   text-align: center;
   /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); */
@@ -62,7 +67,7 @@ body {
   position: absolute;
   text-overflow: ellipsis;
   font-size: 23px;
-  top: -8%;
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
@@ -196,7 +201,7 @@ body {
 
 body {
   /* Set the background image to profile.jpg */
-  background-image: url("profile.jpg");
+  background-image: url("https://i.pinimg.com/originals/bb/62/c3/bb62c3014ad4cf3f66b3c620d5de92eb.gif");
   /* Ensure the background covers the entire body */
   background-size: cover;
   /* Do not repeat the background image */
@@ -204,7 +209,7 @@ body {
   /* Position the background image */
   background-position: center center;
   /* Apply a blur effect to the background */
-  backdrop-filter: blur(8px) brightness(40%);
+  backdrop-filter: blur(2px) brightness(80%);
   /* Use a fixed background to prevent scrolling effects */
   background-attachment: fixed;
   min-height: 100vh;
